@@ -1,0 +1,23 @@
+@import '@/styles/functions';
+@import '@/styles/mixins';
+@import '@/styles/vars';
+
+.switch {
+	label {
+		cursor: pointer;
+	}
+
+	input:checked + label {
+		@include dark-mode(color, $theme-color-6, $theme-color-2);
+		@include dark-mode(
+			background-color,
+			variant-light($theme-color-6),
+			variant-light($theme-color-2)
+		);
+		@include dark-mode(
+			border-color,
+			variant-light($theme-color-6),
+			variant-light($theme-color-2)
+		);
+	}
+}

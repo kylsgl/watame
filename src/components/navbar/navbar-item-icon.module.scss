@@ -1,0 +1,17 @@
+@import '@/styles/mixins';
+
+.icon {
+	margin-right: var(--mantine-spacing-sm);
+	min-height: 1.375rem;
+	min-width: 1.375rem;
+
+	// @include dark-mode(
+	// 	color,
+	// 	var(--mantine-color-gray-6),
+	// 	var(--mantine-color-dark-2)
+	// );
+
+	&.slim {
+		margin-right: 0;
+	}
+}

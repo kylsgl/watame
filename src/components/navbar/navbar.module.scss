@@ -1,0 +1,24 @@
+@import '@/styles/mixins';
+
+.navbar {
+	bottom: unset;
+	position: fixed;
+	padding: 1rem;
+	max-width: 17.1875rem;
+	width: 100%;
+
+	&.slim {
+		width: fit-content;
+		max-width: 5.625rem;
+		padding: 1rem 0.5rem;
+	}
+
+	&,
+	div:not([role='slider']) {
+		@include dark-mode(
+			border-color,
+			var(--mantine-color-gray-2),
+			var(--mantine-color-dark-6)
+		);
+	}
+}

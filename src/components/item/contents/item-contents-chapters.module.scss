@@ -1,0 +1,100 @@
+@import '@/styles/functions';
+@import '@/styles/mixins';
+@import '@/styles/vars';
+
+.container {
+	border-radius: var(--mantine-radius-md);
+	box-shadow: $theme-box-shadow;
+	height: auto;
+	overflow: hidden;
+	padding: var(--mantine-spacing-sm);
+
+	@include dark-mode(
+		background-color,
+		var(--mantine-color-gray-2),
+		var(--mantine-color-dark-8)
+	);
+}
+
+.empty {
+	font-size: 0.9rem;
+	text-align: center;
+
+	@include dark-mode(
+		color,
+		var(--mantine-color-gray-6),
+		var(--mantine-color-dark-2)
+	);
+}
+
+.sort-button {
+	&,
+	div {
+		@include dark-mode(color, $theme-color-6, $theme-color-2);
+	}
+
+	&:hover {
+		@include dark-mode(
+			background-color,
+			variant-light($theme-color-6) !important,
+			variant-light($theme-color-2) !important
+		);
+	}
+}
+
+.item,
+.time {
+	align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	gap: 0.25rem;
+}
+
+.item {
+	border-radius: var(--mantine-radius-md); // should be 0.5rem
+	box-shadow: $theme-box-shadow;
+	cursor: pointer;
+	font-size: 0.9rem;
+	padding: var(--mantine-spacing-md); // should be 1rem
+	text-decoration: none;
+	width: 100%;
+
+	&:hover {
+		@include dark-mode(
+			background-color,
+			var(--mantine-color-gray-3),
+			var(--mantine-color-dark-6)
+		);
+	}
+
+	@include dark-mode(
+		color,
+		var(--mantine-color-gray-7),
+		var(--mantine-color-dark-0)
+	);
+	@include dark-mode(
+		background-color,
+		var(--mantine-color-white),
+		var(--mantine-color-dark-7)
+	);
+}
+
+.scroll {
+	display: flex;
+	flex-direction: column;
+	gap: var(--mantine-spacing-sm);
+	margin: 0 calc(var(--mantine-spacing-sm, 0rem) * -1)
+		calc(var(--mantine-spacing-sm, 0rem) * -1);
+	max-height: 20.695rem;
+	padding: 0 var(--mantine-spacing-md) var(--mantine-spacing-md);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.time {
+	> svg {
+		min-height: 0.875rem;
+		min-width: 0.875rem;
+	}
+}

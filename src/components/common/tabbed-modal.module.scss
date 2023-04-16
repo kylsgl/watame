@@ -1,0 +1,100 @@
+@import '@/styles/mixins';
+@import '@/styles/vars';
+
+.mobile {
+	left: 0;
+}
+
+.header {
+	padding-bottom: var(--mantine-spacing-md);
+}
+
+.tabs {
+	height: 100%;
+	padding: 0;
+	overflow: hidden;
+
+	div[role='tablist'] {
+		@include dark-mode(
+			background-color,
+			var(--mantine-color-gray-2),
+			var(--mantine-color-dark-8)
+		);
+	}
+
+	&,
+	> div {
+		border: 0;
+	}
+}
+
+.desktop {
+	> div:last-child {
+		left: var(--mantine-navbar-width, 0);
+		width: calc(100% - var(--mantine-navbar-width, 0));
+	}
+}
+
+.modal {
+	section[role='dialog'] {
+		border-radius: var(--mantine-radius-md);
+		margin: 0;
+		max-height: 100%;
+		overflow: hidden;
+		padding: 0;
+
+		@include dark-mode(
+			color,
+			var(--mantine-color-gray-7),
+			var(--mantine-color-dark-0)
+		);
+	}
+
+	> div:last-child {
+		padding: calc(
+				var(--mantine-header-height, 0px) + var(--mantine-spacing-md, 0px)
+			)
+			var(--mantine-spacing-md) var(--mantine-spacing-md);
+	}
+}
+
+.tabs-container {
+	// background-color: black;
+	height: 100%;
+}
+
+.tab-icon {
+	border: 0;
+	border-radius: var(--mantine-radius-md) 0 0 var(--mantine-radius-md);
+	padding: var(--mantine-spacing-md);
+
+	@include dark-mode(
+		background-color,
+		var(--mantine-color-gray-2),
+		var(--mantine-color-dark-8)
+	);
+	@include dark-mode(
+		color,
+		var(--mantine-color-gray-8),
+		var(--mantine-color-dark-2)
+	);
+
+	&[aria-selected='true'] {
+		@include dark-mode(
+			background-color,
+			var(--mantine-color-white),
+			var(--mantine-color-dark-7)
+		);
+		@include dark-mode(
+			color,
+			$theme-color-6 !important,
+			$theme-color-2 !important
+		);
+	}
+}
+
+.tab-panel {
+	padding: var(--mantine-spacing-md);
+	overflow-x: hidden;
+	overflow-y: auto;
+}

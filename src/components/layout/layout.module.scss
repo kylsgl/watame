@@ -1,0 +1,43 @@
+@import '@/styles/mixins';
+
+.appShell {
+	&,
+	main,
+	main > div {
+		@include dark-mode(
+			background-color,
+			var(--mantine-color-gray-1),
+			var(--mantine-color-dark-8)
+		);
+		@include dark-mode(
+			color,
+			var(--mantine-color-gray-7),
+			var(--mantine-color-dark-0)
+		);
+	}
+
+	main {
+		// min-height: calc(100vh - var(--mantine-header-height, 0px));
+
+		// scrollbar-gutter: stable both-edges;
+		// padding: 0 0 0 var(--mantine-navbar-width);
+		padding: 0;
+		padding-left: var(--mantine-navbar-width, 0);
+		width: 100%;
+
+		div[id='loading-overlay'] {
+			margin-left: var(--mantine-navbar-width, 0);
+			z-index: 100 !important;
+
+			> svg {
+				width: 3.625rem;
+				height: 3.625rem;
+			}
+		}
+
+		// &,
+		> div {
+			padding-top: var(--mantine-header-height);
+		}
+	}
+}

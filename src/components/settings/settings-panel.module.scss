@@ -1,0 +1,27 @@
+.panel {
+	// &,
+	// div {
+	// 	// width: 100%;
+
+	// 	// &:last-child {
+	// 	// 	width: unset;
+	// 	// }
+	// }
+
+	// div,
+	// label {
+	// 	font-size: 075rem;
+	// }
+}
+
+.segment-control {
+	width: 100%;
+
+	label {
+		font-size: 0.8rem;
+
+		> div {
+			justify-content: center;
+		}
+	}
+}

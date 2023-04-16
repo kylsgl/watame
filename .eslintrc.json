@@ -1,0 +1,48 @@
+{
+	"env": {
+		"browser": true,
+		"es2022": true
+	},
+	"extends": [
+		"next/core-web-vitals",
+		"standard-with-typescript",
+		"airbnb-base",
+		"airbnb-typescript",
+		"airbnb/hooks",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"plugin:@typescript-eslint/strict",
+		"prettier"
+	],
+	"ignorePatterns": [
+		".next",
+		"node_modules",
+		"dist",
+		"coverage",
+		"next-env.d.ts",
+		"next.config.js",
+		"pnpm-lock.yaml",
+		"public/*.js",
+		"public/*.map"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"project": ["./tsconfig.json"],
+		"sourceType": "module"
+	},
+	"plugins": ["react", "@typescript-eslint"],
+	"rules": {
+		"@typescript-eslint/no-floating-promises": [
+			"error",
+			{ "ignoreVoid": true }
+		],
+		"@typescript-eslint/consistent-type-imports": "error",
+		"@typescript-eslint/prefer-for-of": "off",
+		"no-console": ["warn", { "allow": ["warn", "error"] }],
+		"no-void": ["error", { "allowAsStatement": true }]
+	}
+}

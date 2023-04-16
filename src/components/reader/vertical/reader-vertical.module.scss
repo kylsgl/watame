@@ -1,0 +1,39 @@
+.reader-vertical {
+	align-items: center;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+.navigation-wrapper {
+	padding: var(--mantine-spacing-md);
+	position: relative;
+	width: 100%;
+
+	button,
+	span {
+		min-height: 2.625rem;
+		height: 2.625rem;
+	}
+
+	button,
+	button[data-disabled='true'] {
+		// border: 0.0625rem solid;
+		background-color: transparent;
+		border: none;
+		width: 100%;
+	}
+
+	span {
+		flex-grow: 1;
+	}
+}
+
+.page {
+	display: block;
+	margin: 0 auto;
+	height: auto;
+	max-width: 100%;
+	width: auto;
+}

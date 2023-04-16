@@ -1,0 +1,11 @@
+@function variant-light($value) {
+	@return rgba($value, 0.1);
+}
+
+@function variant-lighter($value) {
+	@return rgba($value, 0.15);
+}
+
+@function variant-lightest($value) {
+	@return rgba($value, 0.25);
+}

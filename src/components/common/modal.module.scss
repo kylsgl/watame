@@ -1,0 +1,41 @@
+@import '@/styles/mixins';
+
+.desktop {
+	> div:last-child {
+		left: var(--mantine-navbar-width, 0);
+		width: calc(100% - var(--mantine-navbar-width, 0));
+	}
+}
+
+.mobile {
+	left: 0;
+}
+
+.modal {
+	> div:last-child {
+		// left: var(--mantine-navbar-width);
+		padding: calc(
+				var(--mantine-header-height, 0px) + var(--mantine-spacing-md, 0px)
+			)
+			var(--mantine-spacing-md) var(--mantine-spacing-md);
+	}
+
+	section[role='dialog'] {
+		border-radius: var(--mantine-radius-md);
+		margin: 0;
+		max-height: 100%;
+		overflow: auto;
+		padding: var(--mantine-spacing-md);
+
+		> div:first-child {
+			padding-bottom: var(--mantine-spacing-md);
+			position: relative;
+		}
+
+		@include dark-mode(
+			color,
+			var(--mantine-color-gray-7),
+			var(--mantine-color-dark-0)
+		);
+	}
+}

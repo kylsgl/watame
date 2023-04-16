@@ -1,0 +1,73 @@
+@import '@/styles/mixins';
+@import '@/styles/vars';
+
+.altTitle {
+	line-height: 1.1;
+}
+
+.author {
+	@include dark-mode(
+		color,
+		var(--mantine-color-gray-6),
+		var(--mantine-color-dark-2)
+	);
+}
+
+.author,
+.publication {
+	text-transform: capitalize;
+}
+
+.altTitle,
+.author,
+.title {
+	margin: 0;
+}
+
+.badge {
+	font-size: 0.75rem;
+	font-weight: 500;
+	margin: 0;
+	text-transform: capitalize;
+
+	&:not(:last-of-type) {
+		margin-right: 0.25rem;
+	}
+}
+
+.details {
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	gap: var(--mantine-spacing-xs);
+	justify-content: space-between;
+	min-height: $card-height;
+	text-align: left;
+
+	> div {
+		width: 100%;
+
+		> div:not(:last-child) {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	@include media-queries(min-height, auto);
+	@include media-queries(text-align, center);
+}
+
+.details,
+.rating-publication {
+	@include media-queries(justify-content, center);
+}
+
+.rating {
+	font-weight: 500;
+}
+
+.title {
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 0.2rem;
+}

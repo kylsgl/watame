@@ -1,0 +1,19 @@
+.dropdown {
+	max-width: 100%;
+	position: relative;
+
+	input {
+		height: auto;
+		padding-top: 1.125rem;
+		padding-right: 1.25rem;
+	}
+
+	label {
+		font-size: var(--mantine-font-size-xs);
+		padding-left: var(--mantine-spacing-sm);
+		padding-top: calc(var(--mantine-spacing-sm) / 2);
+		pointer-events: none;
+		position: absolute;
+		z-index: 1;
+	}
+}

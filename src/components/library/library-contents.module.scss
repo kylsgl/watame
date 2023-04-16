@@ -1,0 +1,109 @@
+@import '@/styles/mixins';
+@import '@/styles/vars';
+
+.card {
+	height: $card-height;
+	width: $card-width;
+
+	@media (max-width: 25.063rem) {
+		height: 12.3125rem;
+		width: 8.75rem;
+	}
+}
+
+// .filter {
+// 	// min-height: 21.125rem;
+// 	padding: var(--mantine-spacing-md);
+// }
+
+.grid {
+	padding: 0.5rem 0 var(--mantine-spacing-md);
+	margin: 0;
+	max-height: 48.75rem;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.items-card {
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	min-height: 21.125rem;
+	height: 100%;
+	width: 100%;
+}
+
+.progress {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 0.25rem;
+
+	> div:last-child {
+		background-color: var(--mantine-color-gray-4);
+		height: 0.3rem;
+	}
+}
+
+.progress-text {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row nowrap;
+
+	> span {
+		color: var(--mantine-color-gray-4);
+		display: block;
+		font-size: 0.725rem;
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+}
+
+.tab {
+	cursor: pointer;
+	gap: 0.35rem;
+	width: max-content;
+	text-transform: capitalize;
+
+	> h1 {
+		font-size: var(--mantine-font-size-lg);
+		margin: 0;
+	}
+
+	&.active {
+		border-bottom: 0.125rem solid;
+
+		.count {
+			@include dark-mode(
+				color,
+				var(--mantine-color-gray-6),
+				var(--mantine-color-dark-2)
+			);
+		}
+
+		@include dark-mode(
+			color,
+			var(--mantine-color-gray-7),
+			var(--mantine-color-dark-0)
+		);
+		@include dark-mode(border-color, $theme-color-6, $theme-color-2);
+	}
+
+	@include dark-mode(
+		color,
+		var(--mantine-color-gray-5),
+		var(--mantine-color-dark-3)
+	);
+}
+
+.tab,
+.tabs {
+	align-items: center;
+	display: flex;
+}
+
+.tabs {
+	margin: var(--mantine-spacing-xs);
+	gap: 1.5rem;
+	width: 100%;
+}

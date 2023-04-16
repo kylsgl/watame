@@ -1,0 +1,39 @@
+@import '@/styles/mixins';
+@import '@/styles/vars';
+
+.card,
+.skeleton {
+	transform: translateZ(0);
+	transition: background-color 500ms ease-in-out, border-color 500ms ease-in-out,
+		color 100ms ease-in-out, height 300ms ease-in-out, width 300ms ease-in-out;
+}
+
+.card {
+	border: 0.0625rem solid;
+	border-radius: var(--mantine-radius-md);
+
+	@include dark-mode(
+		background-color,
+		var(--mantine-color-white),
+		var(--mantine-color-dark-7)
+	);
+	@include dark-mode(
+		border-color,
+		var(--mantine-color-gray-2),
+		var(--mantine-color-dark-6)
+	);
+	@include dark-mode(
+		color,
+		var(--mantine-color-gray-7),
+		var(--mantine-color-dark-0)
+	);
+}
+
+.shadow {
+	box-shadow: $theme-box-shadow;
+}
+
+.skeleton {
+	border-radius: var(--mantine-radius-md);
+	margin-bottom: var(--mantine-spacing-md);
+}

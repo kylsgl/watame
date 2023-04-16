@@ -1,0 +1,63 @@
+@import '@/styles/mixins';
+@import '@/styles/vars';
+
+.card {
+	height: 22.1806rem;
+
+	// transition: height 300ms ease-in-out;
+
+	&.shrink {
+		// transition: height 0ms ease-in-out;
+		height: 3.625rem;
+	}
+}
+
+.grid {
+	margin: auto;
+	padding: 0;
+
+	&:first-child {
+		margin-top: var(--mantine-spacing-md);
+	}
+}
+
+.header {
+	margin-bottom: var(--mantine-spacing-md);
+}
+
+.item {
+	box-shadow: $theme-box-shadow;
+	border-radius: var(--mantine-radius-md);
+	margin-bottom: var(--mantine-spacing-md);
+
+	> div {
+		border-radius: var(--mantine-radius-md);
+		min-height: 3.625rem;
+	}
+}
+
+.slides {
+	height: 87.5%;
+}
+
+.subtitle,
+.title {
+	display: inline-block;
+	font-size: var(--mantine-font-size-lg);
+	margin: 0;
+	padding: 0;
+}
+
+.subtitle {
+	@include dark-mode(
+		color,
+		var(--mantine-color-gray-6),
+		var(--mantine-color-dark-2)
+	);
+}
+
+.title {
+	padding-right: 0.375rem;
+
+	// text-transform: uppercase;
+}

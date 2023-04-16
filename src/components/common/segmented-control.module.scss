@@ -1,0 +1,16 @@
+.segment-control {
+	width: 100%;
+
+	&,
+	> span {
+		border-radius: var(--mantine-radius-sm);
+	}
+
+	label {
+		font-size: 0.8rem;
+
+		> div {
+			justify-content: center;
+		}
+	}
+}

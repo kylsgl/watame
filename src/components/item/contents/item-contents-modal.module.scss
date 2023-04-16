@@ -1,0 +1,48 @@
+@import '@/styles/mixins';
+@import '@/styles/vars';
+
+.modal {
+	section[role='dialog'] {
+		max-width: 100%;
+		width: 37.5rem;
+
+		> div {
+			&:first-child {
+				padding-bottom: var(--mantine-spacing-sm) !important;
+			}
+
+			> h2 {
+				width: 95%;
+			}
+		}
+
+		// @include media-queries(width, 350px, 400px, 500px, 600px, 600px);
+
+		@include media-queries(
+			padding,
+			var(--mantine-spacing-xs) !important,
+			var(--mantine-spacing-xs) !important,
+			var(--mantine-spacing-md) !important,
+			var(--mantine-spacing-md) !important,
+			var(--mantine-spacing-md) !important
+		);
+	}
+}
+
+.title {
+	align-items: center;
+	display: flex;
+	gap: 0.25rem;
+	min-height: 1.25rem;
+	width: 100%;
+
+	> span {
+		font-weight: 500;
+	}
+
+	> a {
+		padding: 0 0.15rem;
+
+		@include dark-mode(color, $theme-color-6, $theme-color-2);
+	}
+}

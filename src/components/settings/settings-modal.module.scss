@@ -1,0 +1,28 @@
+@import '@/styles/mixins';
+
+.settings-modal {
+	section[role='dialog'] {
+		width: 31rem;
+
+		div[role='tabs'] {
+			height: 41rem;
+		}
+
+		div[data-tab-panel] {
+			> div:not(:first-child, :nth-child(2)) {
+				margin-top: var(--mantine-spacing-md);
+			}
+
+			> div:not(:first-child, :last-child) {
+				border-bottom: 0.0625rem solid;
+				padding-bottom: var(--mantine-spacing-md);
+
+				@include dark-mode(
+					border-color,
+					var(--mantine-color-gray-2),
+					var(--mantine-color-dark-4)
+				);
+			}
+		}
+	}
+}

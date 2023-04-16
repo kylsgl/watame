@@ -1,0 +1,29 @@
+@import '@/styles/mixins';
+
+.remove {
+	// @include dark-mode(
+	// 	border-color,
+	// 	var(--mantine-color-red-7),
+	// 	var(--mantine-color-red-6)
+	// );
+
+	&,
+	span {
+		@include dark-mode(
+			color,
+			var(--mantine-color-red-7),
+			var(--mantine-color-red-6)
+		);
+	}
+
+	&:hover {
+		&,
+		span {
+			@include dark-mode(
+				color,
+				var(--mantine-color-red-8) !important,
+				var(--mantine-color-red-7) !important
+			);
+		}
+	}
+}

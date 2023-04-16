@@ -1,0 +1,42 @@
+@mixin dark-mode($property, $light-value, $dark-value) {
+	#{$property}: $light-value;
+
+	/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+	body:global(.dark) & {
+		#{$property}: $dark-value;
+	}
+}
+
+@mixin media-queries(
+	$property,
+	$xs: null,
+	$sm: null,
+	$md: null,
+	$lg: null,
+	$xl: null
+) {
+	// 1400px
+	@media (max-width: 87.5rem) {
+		#{$property}: $xl;
+	}
+
+	// 1200px
+	@media (max-width: 75rem) {
+		#{$property}: $lg;
+	}
+
+	// 992px
+	@media (max-width: 62rem) {
+		#{$property}: $md;
+	}
+
+	// 768px
+	@media (max-width: 48rem) {
+		#{$property}: $sm;
+	}
+
+	// 576px
+	@media (max-width: 36rem) {
+		#{$property}: $xs;
+	}
+}

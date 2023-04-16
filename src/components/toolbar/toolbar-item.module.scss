@@ -1,0 +1,16 @@
+.button {
+	border-radius: var(--mantine-radius-sm);
+	width: 100%;
+
+	// padding: 0 10%;
+
+	&.text {
+		font-size: 0.8rem;
+		font-weight: 500;
+
+		span {
+			// margin-left: var(--mantine-spacing-xs);
+			margin-left: 0.313rem;
+		}
+	}
+}

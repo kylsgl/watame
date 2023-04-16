@@ -1,0 +1,23 @@
+@import '@/styles/mixins';
+@import '@/styles/vars';
+
+.logo {
+	align-items: center;
+	box-sizing: border-box;
+	display: flex;
+	height: auto;
+	width: 70%; // 80%
+
+	@include dark-mode(fill, $theme-color-6, $theme-color-2);
+}
+
+.image {
+	height: auto;
+	width: 15%;
+	margin-right: 0.5rem;
+}
+
+.text {
+	height: auto;
+	width: 60%;
+}

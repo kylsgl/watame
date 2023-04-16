@@ -1,0 +1,45 @@
+$header-height: 56px;
+
+.logo {
+	width: 170px;
+
+	// &.reader {
+	// 	display: none;
+	// }
+}
+
+.header {
+	height: 56px;
+
+	// border-bottom: 0.0625rem solid pink;
+	// padding: 0 1rem;
+	padding: 0 0.5rem;
+
+	> div {
+		// align-items: center;
+		// display: flex;
+		// justify-content: space-between;
+
+		height: $header-height;
+	}
+
+	&.reader {
+		background-color: transparent;
+		border: unset;
+		position: relative;
+		z-index: 2;
+		opacity: 0.4;
+		transition: opacity 500ms ease-in-out;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		// top: 0;
+
+		// .bottom {
+		// 	bottom: 0;
+		// 	top: unset;
+		// }
+	}
+}

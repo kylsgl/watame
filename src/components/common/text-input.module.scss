@@ -1,0 +1,51 @@
+@import '@/styles/mixins';
+@import '@/styles/vars';
+
+.input {
+	box-shadow: $theme-box-shadow;
+
+	&,
+	input {
+		border-radius: var(--mantine-radius-md);
+
+		@include dark-mode(
+			background-color,
+			var(--mantine-color-white),
+			var(--mantine-color-dark-7)
+		);
+		@include dark-mode(
+			border-color,
+			var(--mantine-color-gray-2),
+			var(--mantine-color-dark-6)
+		);
+	}
+
+	&.error {
+		input {
+			@include dark-mode(
+				border-color,
+				var(--mantine-color-red-7),
+				var(--mantine-color-red-6)
+			);
+		}
+
+		&,
+		button,
+		input,
+		svg {
+			@include dark-mode(
+				color,
+				var(--mantine-color-red-7),
+				var(--mantine-color-red-6)
+			);
+		}
+	}
+
+	> div:nth-child(2) {
+		display: none;
+	}
+
+	> div > div:last-child {
+		width: 3.125rem;
+	}
+}

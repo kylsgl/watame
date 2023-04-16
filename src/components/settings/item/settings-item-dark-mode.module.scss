@@ -1,0 +1,7 @@
+@import '@/styles/mixins';
+
+.switch {
+	border-radius: var(--mantine-radius-lg);
+
+	@include dark-mode(color, #707070, #faaf05);
+}

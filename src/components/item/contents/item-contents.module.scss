@@ -1,0 +1,88 @@
+@import '@/styles/mixins';
+@import '@/styles/vars';
+
+.chapters,
+.description {
+	&,
+	> div {
+		border-radius: var(--mantine-radius-md);
+	}
+}
+
+.chapters {
+	&.loading {
+		height: 26.5694rem;
+	}
+}
+
+.cover {
+	width: $card-width;
+	height: $card-height;
+	min-height: $card-height;
+	min-width: $card-width;
+
+	> div {
+		height: auto;
+	}
+
+	@include media-queries(min-height, auto);
+}
+
+.cover,
+.details {
+	&,
+	> div {
+		border-radius: var(--mantine-radius-md);
+	}
+}
+
+.description {
+	border-radius: var(--mantine-radius-md);
+	margin: var(--mantine-spacing-sm) 0;
+
+	&.loading {
+		height: 5.8644rem;
+	}
+}
+
+.details {
+	align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	gap: var(--mantine-spacing-sm);
+	justify-content: flex-start;
+	min-height: $card-height;
+
+	@include media-queries(align-items, center);
+	@include media-queries(flex-direction, column);
+	@include media-queries(flex-wrap, initial);
+}
+
+.left-panel {
+	display: flex;
+	gap: var(--mantine-spacing-sm);
+	flex-shrink: 0;
+	flex-wrap: wrap;
+	max-width: $card-width;
+	width: max-content;
+
+	button {
+		box-shadow: $theme-box-shadow;
+		height: 2.25rem;
+		min-width: 2.25rem;
+		width: 100%;
+	}
+
+	@include media-queries(flex-shrink, 1);
+}
+
+.right-panel {
+	width: 100%;
+	min-height: $card-height;
+
+	&.loading {
+		@include media-queries(height, 28.7937rem);
+	}
+
+	@include media-queries(min-height, auto);
+}

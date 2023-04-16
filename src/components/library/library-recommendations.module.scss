@@ -1,0 +1,60 @@
+@import '@/styles/vars';
+
+.author {
+	text-transform: capitalize;
+}
+
+.card {
+	// border: 0.125rem solid;
+	// border-radius: var(--mantine-radius-md);
+	box-shadow: $theme-box-shadow;
+	display: flex;
+	flex-direction: row wrap;
+	gap: var(--mantine-spacing-sm);
+	margin-left: -5.625rem;
+
+	&:hover {
+		transform: scale(1.05);
+		z-index: 11 !important;
+	}
+}
+
+.container {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	gap: var(--mantine-spacing-md);
+	width: 100%;
+
+	> div {
+		width: 50%;
+	}
+}
+
+.history {
+	display: flex;
+	flex-direction: column;
+}
+
+.history-container {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	gap: var(--mantine-spacing-md);
+	justify-content: center;
+
+	// margin-left: 5.625rem;
+	position: relative;
+	width: 100%;
+}
+
+.details {
+	> span {
+		display: block;
+	}
+}
+
+.items-card {
+	max-width: 50%;
+	flex-grow: 0;
+}

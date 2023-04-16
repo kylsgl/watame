@@ -1,0 +1,103 @@
+@import '@/styles/functions';
+@import '@/styles/mixins';
+@import '@/styles/vars';
+
+.item {
+	align-items: center;
+	border-radius: var(--mantine-radius-md);
+	display: flex;
+	font-size: var(--mantine-font-size-sm);
+	font-weight: 500;
+	min-height: 2.625rem;
+	padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+	text-decoration: none;
+	width: 100%;
+	overflow: hidden;
+
+	@include dark-mode(
+		color,
+		var(--mantine-color-gray-7),
+		var(--mantine-color-dark-1)
+	);
+
+	&.active,
+	&:active {
+		@include dark-mode(
+			background-color,
+			var(--mantine-color-gray-0),
+			var(--mantine-color-dark-6)
+		);
+		@include dark-mode(
+			color,
+			var(--mantine-color-black),
+			var(--mantine-color-white)
+		);
+
+		.icon {
+			@include dark-mode(
+				color,
+				var(--mantine-color-black),
+				var(--mantine-color-white)
+			);
+		}
+	}
+
+	&.slim {
+		width: unset;
+	}
+}
+
+.button {
+	&.active,
+	&:active {
+		// background-color: variant-light(#ffdeeb) !important;
+		// background-color: #{'rgba(var(--color_rgb), 0.5)'} !important;
+		// background-color: rgb($theme-color-7, 0.5) !important;
+
+		// background-color: rgba($color: #FCC2D7, $alpha: 0.2) !important;
+
+		@include dark-mode(
+			background-color,
+			variant-light($theme-color-6) !important,
+			variant-light($theme-color-2) !important
+		);
+		@include dark-mode(
+			color,
+			$theme-color-6 !important,
+			$theme-color-2 !important
+		);
+
+		.icon {
+			@include dark-mode(
+				color,
+				$theme-color-6 !important,
+				$theme-color-2 !important
+			);
+		}
+	}
+
+	&:hover {
+		@include dark-mode(
+			background-color,
+			var(--mantine-color-gray-0),
+			var(--mantine-color-dark-6)
+		);
+		@include dark-mode(
+			color,
+			var(--mantine-color-black),
+			var(--mantine-color-white)
+		);
+
+		.icon {
+			@include dark-mode(
+				color,
+				var(--mantine-color-black),
+				var(--mantine-color-white)
+			);
+		}
+	}
+}
+
+.link {
+	text-decoration: none;
+}

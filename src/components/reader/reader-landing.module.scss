@@ -1,0 +1,75 @@
+@import '@/styles/mixins';
+
+// .container {
+// 	align-items: center;
+// 	display: flex;
+// 	height: 100%;
+// 	padding-top: 0 !important;
+
+// 	> div {
+// 		margin: auto;
+
+// 		text-align: center;
+
+// 		width: 85%;
+// 	}
+// }
+
+// .cont {
+// 	padding: 0 !important;
+// }
+
+.configure {
+	display: flex;
+	align-items: center;
+	gap: 0.2rem;
+	justify-content: center;
+
+	// padding-top: 10rem;
+
+	font-size: 0.85rem;
+	margin: auto;
+	margin-top: 1.25rem;
+	width: max-content;
+
+	// transform: translateY(calc(38.5vh - var(--mantine-spacing-md)));
+}
+
+.container {
+	margin: auto;
+	max-width: 43.75rem;
+	width: 85%;
+	text-align: center;
+	transform: translateY(calc(41vh));
+	transition: transform 300ms ease-in-out 300ms;
+
+	// > div {
+	// 	margin: auto;
+
+	// 	text-align: center;
+
+	// 	width: 85%;
+	// }
+}
+
+.title {
+	margin-bottom: 1.25rem;
+}
+
+.error div[role='tooltip'] {
+	// border-radius: var(--mantine-radius-md);
+	color: var(--mantine-color-white);
+
+	@include dark-mode(
+		background-color,
+		var(--mantine-color-red-7) !important,
+		var(--mantine-color-red-6) !important
+	);
+}
+
+.input {
+	&,
+	input {
+		border-radius: var(--mantine-radius-md);
+	}
+}

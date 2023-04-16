@@ -1,0 +1,13 @@
+.container {
+	margin: 0 !important;
+	margin: calc(var(--mantine-spacing-md) * -1) !important;
+	padding: var(--mantine-spacing-md);
+
+	// width: 100%;
+
+	overflow: hidden;
+
+	& > div:not(:first-child) {
+		margin-top: var(--mantine-spacing-sm);
+	}
+}

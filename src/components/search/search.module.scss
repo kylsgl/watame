@@ -1,0 +1,72 @@
+.container {
+	margin-top: var(--mantine-spacing-md);
+}
+
+.title-container {
+	display: flex;
+	flex-direction: column;
+	gap: 3.125rem;
+	margin: auto;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	text-align: center;
+	transition: opacity 600ms ease-in-out, transform 300ms ease-in-out;
+	transform: translateY(calc(45vh));
+	left: var(--mantine-navbar-width, 0);
+	right: 0;
+	top: calc(var(--mantine-header-height, 0px) - 2.5rem);
+
+	&.centered {
+		transition: opacity 600ms ease-in-out 600ms,
+			transform 300ms ease-in-out 300ms;
+		opacity: 1;
+	}
+}
+
+.configure,
+.title {
+	pointer-events: all;
+}
+
+.title {
+	// transform: translateY(calc(32.5vh - var(--mantine-spacing-md)));
+	// padding-bottom: 3rem;
+	margin-bottom: 1.25rem;
+}
+
+.configure {
+	display: flex;
+	align-items: center;
+	gap: 0.2rem;
+	justify-content: center;
+
+	// padding-top: 10rem;
+
+	font-size: 0.85rem;
+	margin: auto;
+	margin-top: 1.25rem;
+	width: max-content;
+
+	// transform: translateY(calc(38.5vh - var(--mantine-spacing-md)));
+}
+
+// ! DO NOT USE MAX-WIDTH/WIDTH https://stackoverflow.com/questions/37432531/laggy-css-animation
+.searchbar {
+	margin: auto;
+	max-width: 100%;
+	width: 100%;
+	text-align: center;
+	transform: translateY(0);
+	transition: transform 300ms ease-in-out, max-width 300ms ease-in-out 300ms,
+		width 300ms ease-in-out 300ms;
+	z-index: 1;
+
+	&.centered {
+		max-width: 43.75rem;
+		width: 85%;
+		transform: translateY(calc(45vh));
+		transition: transform 300ms ease-in-out 300ms, max-width 300ms ease-in-out,
+			width 300ms ease-in-out;
+	}
+}

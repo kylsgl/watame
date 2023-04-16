@@ -1,0 +1,79 @@
+@import '@/styles/vars';
+
+.card {
+	align-items: flex-end;
+	background-clip: content-box;
+	background-color: transparent;
+	box-shadow: $theme-box-shadow;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+
+	&,
+	section {
+		border-radius: var(--mantine-radius-md);
+		transition: transform 150ms ease-in-out;
+	}
+
+	&,
+	img,
+	section {
+		backface-visibility: hidden;
+		max-height: $card-height;
+		max-width: $card-width;
+		height: 100%;
+		width: 100%;
+	}
+
+	> img {
+		border-radius: calc(var(--mantine-radius-md, 0.5rem) + 0.05rem);
+		min-height: 1rem;
+		min-width: 1rem;
+	}
+}
+
+.card-details {
+	background-image: linear-gradient(
+		0deg,
+		rgb(0 0 0 / 85%) 0%,
+		rgb(0 0 0 / 0%) 50%
+	);
+	bottom: -0.05rem;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-end;
+	line-height: 1.3rem;
+	position: absolute;
+	z-index: 1;
+
+	> div {
+		color: var(--mantine-color-white);
+		font-size: 0.95rem;
+		padding: var(--mantine-spacing-xs);
+		position: relative;
+		text-align: center;
+		text-shadow: 0 0 0.5rem #000, 0 0 0.5rem #000, 0 0 0.5rem #000,
+			0 0 0.5rem #000;
+	}
+}
+
+.hover:hover {
+	cursor: pointer;
+	transform: scale(1.075);
+}
+
+.skeleton {
+	border-radius: 0.5rem;
+	height: $card-height;
+	width: $card-width;
+	z-index: 2;
+
+	> img {
+		min-height: 0.625rem;
+		min-width: 0.625rem;
+	}
+}

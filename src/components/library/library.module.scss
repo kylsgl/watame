@@ -1,0 +1,8 @@
+.container {
+	margin: auto;
+	max-width: 80rem;
+
+	> div:not(:last-child) {
+		margin-bottom: var(--mantine-spacing-md);
+	}
+}

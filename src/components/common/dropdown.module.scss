@@ -1,0 +1,50 @@
+@import '@/styles/mixins';
+
+.arrow {
+	transform: rotate(0deg);
+	transition: transform 150ms ease-in-out;
+
+	&.opened {
+		transform: rotate(180deg);
+	}
+}
+
+.button {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.625rem 0.938rem;
+	border-radius: var(--mantine-radius-md);
+	border: 0.0625rem solid;
+	width: auto;
+
+	> div {
+		margin-right: 0.625rem;
+
+		svg {
+			@include media-queries(display, none);
+		}
+	}
+
+	@include dark-mode(
+		background-color,
+		var(--mantine-color-white),
+		var(--mantine-color-dark-6)
+	);
+	@include dark-mode(
+		border-color,
+		var(--mantine-color-gray-4),
+		var(--mantine-color-dark-4)
+	);
+	@include media-queries(height, max-content);
+}
+
+.item {
+	font-size: var(--mantine-font-size-sm);
+	text-transform: capitalize;
+}
+
+.label {
+	font-size: 0.8rem;
+	text-transform: capitalize;
+}

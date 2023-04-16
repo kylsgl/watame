@@ -1,0 +1,77 @@
+@import '@/styles/functions';
+@import '@/styles/mixins';
+@import '@/styles/vars';
+
+.check-box {
+	input {
+		cursor: pointer;
+
+		&:checked {
+			@include dark-mode(
+				background-color,
+				variant-light($theme-color-6),
+				variant-light($theme-color-2)
+			);
+			@include dark-mode(
+				border-color,
+				variant-light($theme-color-6),
+				variant-light($theme-color-2)
+			);
+		}
+	}
+
+	svg {
+		@include dark-mode(
+			color,
+			$theme-color-6 !important,
+			$theme-color-2 !important
+		);
+	}
+}
+
+.details {
+	flex-grow: 1;
+	flex-wrap: nowrap;
+	margin: 0 var(--mantine-spacing-md);
+	margin-left: 0.625rem;
+}
+
+.icon {
+	height: 2.375rem;
+	min-height: 2.375rem;
+	min-width: 2.375rem;
+	width: auto;
+}
+
+.item {
+	align-items: center;
+	display: flex;
+	box-shadow: $theme-box-shadow;
+	justify-content: space-between;
+
+	// border: 0.0625rem solid black;
+
+	border-radius: var(--mantine-radius-md); // should be 0.5rem
+	padding: var(--mantine-spacing-md); // should be 1rem
+	width: 100%;
+	gap: 0;
+
+	@include dark-mode(
+		color,
+		var(--mantine-color-gray-7),
+		var(--mantine-color-dark-1)
+	);
+	@include dark-mode(
+		background-color,
+		var(--mantine-color-gray-0),
+		var(--mantine-color-dark-6)
+	);
+}
+
+.tag {
+	text-transform: capitalize;
+
+	&:not(:last-of-type) {
+		margin-right: 0.3125rem;
+	}
+}

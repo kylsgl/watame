@@ -13,13 +13,13 @@ export default function SettingsPanel(): JSX.Element {
 	const [{ readerLayout }] = useAtom(globalOptsAtom);
 
 	return (
-		<Fragment>
+		<>
 			<SettingsItemReaderLayout compact />
 			{readerLayout === 'horizontal' ? (
 				<SettingsHorizontal className={styles['segment-control']} />
 			) : (
 				<SettingsVertical className={styles['segment-control']} />
 			)}
-		</Fragment>
+		</>
 	);
 }

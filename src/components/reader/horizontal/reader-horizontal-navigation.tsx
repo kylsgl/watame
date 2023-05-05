@@ -67,7 +67,7 @@ export default function ReaderHorizontalNavigation({
 	);
 
 	return (
-		<Fragment>
+		<>
 			{jsxArrow(
 				styles.left,
 				IconChevronLeft,
@@ -81,6 +81,6 @@ export default function ReaderHorizontalNavigation({
 				isLTR ? 'Go to next chapter' : 'Go to previous chapter',
 				isLTR ? handleClickNext : handleClickPrev
 			)}
-		</Fragment>
+		</>
 	);
 }

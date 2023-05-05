@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { type UseQueryResult } from '@tanstack/react-query';
 import { Grid } from '@mantine/core';
 
@@ -69,7 +69,7 @@ export default function SearchResultsItem({
 								title={title}
 							/>
 						) : (
-							<></>
+							<>{}</>
 						)
 				)}
 				imageUrls={results.map(
@@ -79,13 +79,13 @@ export default function SearchResultsItem({
 		);
 
 		return (
-			<Fragment>
+			<>
 				<div className={styles.header}>
 					<h1 className={styles.title}>{source}</h1>
 					<h1 className={styles.subtitle}>{results.length}</h1>
 				</div>
 				{results.length > 0 ? jsxSlider : null}
-			</Fragment>
+			</>
 		);
 	};
 

@@ -1,26 +1,26 @@
 import { useAtomValue } from 'jotai';
-import { Fragment, useMemo } from 'react';
 import { ItemsCard } from '@/components/common';
-import { type LibraryEntry, bookmarksAtom, historyAtom } from '@/store';
+import { type LibraryEntry, historyAtom } from '@/store';
 import { ItemCard } from '../item';
 
 import styles from './library-recommendations.module.scss';
 
 function ItemsCardWrapper(element: JSX.Element): JSX.Element {
 	return (
-		<Fragment>
+		<>
 			<div className={`${styles.header}`}>
-				<h1 className={styles.title}>{`Library`}</h1>
+				<h1 className={styles.title}>Library</h1>
 				<h1 className={styles.subtitle}>{5}</h1>
 			</div>
 			<ItemsCard
+				// eslint-disable-next-line react/destructuring-assignment
 				key={element.key}
 				className={styles['items-card']}
 				skeleton={false}
 			>
 				{element}
 			</ItemsCard>
-		</Fragment>
+		</>
 	);
 }
 

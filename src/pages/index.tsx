@@ -20,7 +20,7 @@ export default function Home(): JSX.Element {
 	};
 
 	return (
-		<Fragment>
+		<>
 			<Container fluid mt="md" p="md">
 				<Library />
 			</Container>
@@ -29,6 +29,6 @@ export default function Home(): JSX.Element {
 				opened={globalOpenedModal === 'Item'}
 				onClose={handleClose}
 			/>
-		</Fragment>
+		</>
 	);
 }

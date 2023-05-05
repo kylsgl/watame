@@ -65,7 +65,7 @@ export default function ReaderVertical({
 		<Container className={className} fluid>
 			<ImageLoader
 				className={styles['reader-vertical']}
-				firstIntersect={true}
+				firstIntersect
 				imageElements={jsxImages}
 				imageUrls={imageUrls}
 				onIntersect={handleIntersect}

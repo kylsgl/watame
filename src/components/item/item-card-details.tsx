@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { useItemContentsQuery } from '@/hooks';
 
 import ItemCard from './item-card';
@@ -23,20 +22,18 @@ export default function ItemCardDetails({
 		!(fetchStatus !== 'idle' || isError || isLoading) && isSuccess;
 
 	return (
-		<Fragment>
-			<div className={className}>
-				{isReady && data !== undefined ? (
-					<ItemCard
-						imageUrl={data.image}
-						itemUrl={url}
-						lazy={false}
-						onClick={onClick}
-						title={data.title}
-					>
-						{children}
-					</ItemCard>
-				) : null}
-			</div>
-		</Fragment>
+		<div className={className}>
+			{isReady && data !== undefined ? (
+				<ItemCard
+					imageUrl={data.image}
+					itemUrl={url}
+					lazy={false}
+					onClick={onClick}
+					title={data.title}
+				>
+					{children}
+				</ItemCard>
+			) : null}
+		</div>
 	);
 }

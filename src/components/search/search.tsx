@@ -46,10 +46,9 @@ export default function Search(): JSX.Element {
 			size={1496}
 		>
 			<div className={`${styles['title-container']} ${centeredStyle}`}>
-				<Title
-					className={`${styles.title}`}
-					order={2}
-				>{`what can it be now?`}</Title>
+				<Title className={`${styles.title}`} order={2}>
+					what can it be now?
+				</Title>
 
 				<Anchor className={styles.configure} onClick={handleConfigureClick}>
 					<IconSettings size={18} stroke={1.5} />

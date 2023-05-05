@@ -218,7 +218,7 @@ export default function Reader({
 		const title = `${openedTitle.current.chapterLabel} | ${openedTitle.itemTitle} - Watame`;
 
 		return (
-			<Fragment>
+			<>
 				<Head>
 					<title>{title}</title>
 					<meta property="og:title" content={title} key="title" />
@@ -227,7 +227,7 @@ export default function Reader({
 					className={styles.container}
 					imageUrls={chapterPagesData}
 				/>
-			</Fragment>
+			</>
 		);
 	}
 

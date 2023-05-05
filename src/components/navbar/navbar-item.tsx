@@ -68,7 +68,7 @@ export default function NavbarItem({
 				<Link
 					className={styles.link}
 					href={{ pathname: link }}
-					scroll={true}
+					scroll
 					shallow={false}
 				>
 					{jsxButtonElement}

@@ -106,26 +106,24 @@ export default function LibraryFilter({
 	);
 
 	const jsxEmpty: JSX.Element = (
-		<Fragment>
-			<span className={styles.empty}>
-				<span>No titles found</span>
+		<span className={styles.empty}>
+			<span>No titles found</span>
 
-				{entries.length <= 0 ? (
-					<Fragment>
-						<Divider className={styles.divider} size="sm" />
-						<Link
-							className={styles.search}
-							href={{
-								pathname: '/search',
-							}}
-						>
-							<IconSearch size={16} stroke={1.5} />
-							Search Titles
-						</Link>
-					</Fragment>
-				) : null}
-			</span>
-		</Fragment>
+			{entries.length <= 0 ? (
+				<>
+					<Divider className={styles.divider} size="sm" />
+					<Link
+						className={styles.search}
+						href={{
+							pathname: '/search',
+						}}
+					>
+						<IconSearch size={16} stroke={1.5} />
+						Search Titles
+					</Link>
+				</>
+			) : null}
+		</span>
 	);
 
 	return (
@@ -158,11 +156,11 @@ export default function LibraryFilter({
 				/>
 			</div>
 
-			<Fragment>
+			<>
 				{filteredItems.length > 0
 					? itemsWrapper(filteredItems.map(itemWrapper))
 					: jsxEmpty}
-			</Fragment>
+			</>
 		</ItemsCard>
 	);
 }

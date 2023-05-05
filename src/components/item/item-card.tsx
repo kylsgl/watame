@@ -1,3 +1,5 @@
+import { type KeyboardEvent } from 'react';
+
 import styles from './item-card.module.scss';
 
 import ImageElement, { type ImageElementProps } from '../image/image-element';
@@ -36,6 +38,12 @@ export default function ItemCard({
 		}
 	};
 
+	const handleKeyDown = ({ key }: KeyboardEvent<HTMLDivElement>): void => {
+		if (key === 'Enter') {
+			handleClick();
+		}
+	};
+
 	return (
 		<div
 			className={`
@@ -44,7 +52,10 @@ export default function ItemCard({
 				${className}
 			`}
 			onClick={handleClick}
+			onKeyDown={handleKeyDown}
+			role="button"
 			style={style}
+			tabIndex={0}
 		>
 			{details ? (
 				<section className={styles['card-details']}>

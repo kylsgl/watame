@@ -1,7 +1,6 @@
-import { Fragment } from 'react';
 import { useAtomValue } from 'jotai';
 import { useRouter } from 'next/router';
-import { IconBook, IconBooks, IconHome, IconSearch } from '@tabler/icons-react';
+import { IconBook, IconHome, IconSearch } from '@tabler/icons-react';
 
 import { openedTitleAtom } from '@/store';
 
@@ -31,7 +30,7 @@ export default function NavbarContents({
 	const isReader: boolean = pathname === '/reader';
 
 	return (
-		<Fragment>
+		<>
 			<NavbarItems
 				borderBottom={isReader && chapterUrl.length > 0}
 				collapsed={collapsed && !drawer}
@@ -40,6 +39,6 @@ export default function NavbarContents({
 			/>
 
 			{isReader && <NavbarControl collapsed={collapsed && !drawer} />}
-		</Fragment>
+		</>
 	);
 }

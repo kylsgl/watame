@@ -16,10 +16,10 @@ const jsxModalWrapper = (
 	element: JSX.Element,
 	zIndex?: number
 ): JSX.Element => (
-	<Fragment>
+	<>
 		{element}
 		<ControlPanelModal zIndex={zIndex} />
-	</Fragment>
+	</>
 );
 
 export default function ReaderPage(): JSX.Element {

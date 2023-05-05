@@ -103,10 +103,10 @@ export default function ItemContents({
 	);
 
 	return (
-		<Fragment>
+		<>
 			{jsxDetailsPanel}
 			{jsxDescription}
 			{jsxChapters}
-		</Fragment>
+		</>
 	);
 }

@@ -24,7 +24,7 @@ const font = undefined;
 
 export default function App({ Component }: AppProps): JSX.Element {
 	return (
-		<Fragment>
+		<>
 			<Head>
 				<meta name="application-name" content="Watame App" />
 				<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -81,6 +81,6 @@ export default function App({ Component }: AppProps): JSX.Element {
 					</LayoutNoSSR>
 				</Theme>
 			</QueryClientProvider>
-		</Fragment>
+		</>
 	);
 }

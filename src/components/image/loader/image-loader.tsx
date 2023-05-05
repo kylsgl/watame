@@ -2,7 +2,6 @@ import {
 	type PropsWithChildren,
 	type ReactElement,
 	Children,
-	Fragment,
 	cloneElement,
 	isValidElement,
 	useEffect,
@@ -112,13 +111,13 @@ export default function ImageLoader({
 	);
 
 	return (
-		<Fragment>
+		<>
 			<div className={`${styles.container} ${className}`} ref={containerRef}>
 				{containerWrapper !== undefined
 					? containerWrapper(jsxImagesWithRefs)
 					: jsxImagesWithRefs}
 			</div>
 			<ImageLoaderPreloader imageUrls={imageUrls} preload={preload} />
-		</Fragment>
+		</>
 	);
 }

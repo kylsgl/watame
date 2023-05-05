@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { type KeyboardEvent, useState } from 'react';
 import { useAtomValue, useSetAtom } from 'jotai';
 import { Grid, Progress } from '@mantine/core';
 
@@ -57,7 +57,7 @@ export default function LibraryContents(): JSX.Element {
 		itemUrl,
 		title,
 	}: LibraryEntry): JSX.Element => (
-		<Grid.Col key={itemUrl} span={'content'}>
+		<Grid.Col key={itemUrl} span="content">
 			<ItemCard
 				className={styles.card}
 				imageUrl={imageUrl}
@@ -88,11 +88,22 @@ export default function LibraryContents(): JSX.Element {
 					setTab(label);
 				};
 
+				const handleTabKeyDown = ({
+					key,
+				}: KeyboardEvent<HTMLDivElement>): void => {
+					if (key === 'Enter') {
+						handleTabClick();
+					}
+				};
+
 				return (
 					<div
 						className={`${styles.tab} ${tab === label ? styles.active : ''}`}
 						key={label}
 						onClick={handleTabClick}
+						onKeyDown={handleTabKeyDown}
+						role="button"
+						tabIndex={0}
 					>
 						<h1 className={styles.title}>{label}</h1>
 						<h1 className={styles.count}>{count}</h1>

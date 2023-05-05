@@ -26,11 +26,11 @@ export default function NavbarHeader({
 			<Group className={styles.header} spacing="xs" position="apart">
 				{showMenu && collapsed && <NavbarBurgerButton />}
 				{!collapsed && (
-					<Fragment>
+					<>
 						<Logo className={styles.logo} />
 
 						<SettingsItemDarkMode compact />
-					</Fragment>
+					</>
 				)}
 			</Group>
 		</NavbarSection>

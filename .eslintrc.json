@@ -44,6 +44,8 @@
 		"@typescript-eslint/prefer-for-of": "off",
 		"no-console": ["warn", { "allow": ["warn", "error"] }],
 		"no-void": ["error", { "allowAsStatement": true }],
+		"react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
+		"react/no-unused-prop-types": "off",
 		"react/jsx-props-no-spreading": "off",
 		"react/react-in-jsx-scope": "off",
 		"react/require-default-props": "off"

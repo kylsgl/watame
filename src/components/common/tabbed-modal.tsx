@@ -134,7 +134,7 @@ export function TabbedModal({
 				orientation="vertical"
 				defaultValue={defaultValue}
 				className={styles.tabs}
-				role="tabs"
+				role="tab"
 			>
 				<Tabs.List className={styles['tabs-container']}>{jsxTabs}</Tabs.List>
 				{jsxPanels}

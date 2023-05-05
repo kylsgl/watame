@@ -11,7 +11,7 @@ export default function ControlDetails(): JSX.Element {
 	const { itemTitle, source } = useAtomValue(openedTitleAtom);
 
 	return (
-		<Fragment>
+		<>
 			<Skeleton visible={itemTitle.length <= 0}>
 				<NavbarItem icon={IconBook} isActive label={itemTitle} />
 			</Skeleton>
@@ -23,6 +23,6 @@ export default function ControlDetails(): JSX.Element {
 					label={source?.title ?? 'Not found'}
 				/>
 			</Skeleton>
-		</Fragment>
+		</>
 	);
 }

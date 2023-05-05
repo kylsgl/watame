@@ -17,9 +17,9 @@ import styles from './item-contents-description.module.scss';
 
 function Label(label: string, Icon: FC<TablerIconsProps>): JSX.Element {
 	return (
-		<Fragment>
+		<>
 			{label} <Icon size="0.8rem" stroke={1.5} />
-		</Fragment>
+		</>
 	);
 }
 

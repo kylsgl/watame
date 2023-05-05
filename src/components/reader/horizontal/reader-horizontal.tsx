@@ -97,8 +97,8 @@ export default function ReaderHorizontal({
 
 	const jsxSlider = (elements: JSX.Element[]): JSX.Element => (
 		<SwiperComponent
-			autoHeight={true}
-			className={`reader-horizontal`}
+			autoHeight
+			className="reader-horizontal"
 			dir={horizontalReaderOpts.direction}
 			direction="horizontal"
 			hashNavigation={{
@@ -116,14 +116,14 @@ export default function ReaderHorizontal({
 			onAfterInit={handleAfterInit}
 			onKeyPress={handleKeyPress}
 			onSlideChangeTransitionEnd={handleSlideChangeTransitionEnd}
-			passiveListeners={true}
+			passiveListeners
 			preventInteractionOnTransition
 			slidesPerGroup={horizontalReaderOpts.pages}
 			slidesPerView={horizontalReaderOpts.pages}
 			spaceBetween={0} // 3 // 5
 			speed={0}
-			updateOnWindowResize={true}
-			zoom={true}
+			updateOnWindowResize
+			zoom
 		>
 			{horizontalReaderOpts.pages > 1 && horizontalReaderOpts.offset && (
 				<SwiperSlide className={styles['offset-slide']} data-hash="page=1" />
@@ -181,7 +181,7 @@ export default function ReaderHorizontal({
 				horizontalReaderOpts.alignCenter ? styles['align-center'] : ''
 			} ${className}`}
 			containerWrapper={jsxSlider}
-			firstIntersect={true}
+			firstIntersect
 			imageElements={jsxImages}
 			imageUrls={imageUrls}
 			imageWrapper={jsxSlide}

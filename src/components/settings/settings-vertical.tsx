@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import SettingsVerticalDirection from './settings-vertical-direction';
 
 interface SettingsVerticalProps {
@@ -8,9 +7,5 @@ interface SettingsVerticalProps {
 export default function SettingsVertical({
 	className = '',
 }: SettingsVerticalProps): JSX.Element {
-	return (
-		<Fragment>
-			<SettingsVerticalDirection className={className} />
-		</Fragment>
-	);
+	return <SettingsVerticalDirection className={className} />;
 }

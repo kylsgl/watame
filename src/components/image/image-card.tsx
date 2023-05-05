@@ -1,3 +1,5 @@
+import { type KeyboardEvent } from 'react';
+
 interface ImageCardProps {
 	className?: string;
 	id?: string;
@@ -15,15 +17,24 @@ export default function ImageCard({
 	title,
 	onClick,
 }: ImageCardProps): JSX.Element {
+	const handleKeyDown = ({ key }: KeyboardEvent<HTMLImageElement>): void => {
+		if (key === 'Enter' && onClick !== undefined) {
+			onClick();
+		}
+	};
+
 	return (
 		<div
 			className={className}
 			id={id}
 			ref={ref}
 			onClick={onClick}
+			onKeyDown={handleKeyDown}
+			role="button"
 			style={{
 				cursor: onClick != null ? 'pointer' : undefined,
 			}}
+			tabIndex={0}
 		>
 			{title !== undefined ? (
 				<section>

@@ -1,5 +1,3 @@
-import { Fragment } from 'react';
-
 import { useAtomValue } from 'jotai';
 
 import { globalOptsAtom } from '@/store';
@@ -20,11 +18,7 @@ export default function ReaderVerticalNavigation({
 		<ControlChapterSelector
 			className={className}
 			middleElement={
-				layout === 'mobile' ? (
-					<NavbarControlButton collapsed />
-				) : (
-					<Fragment></Fragment>
-				)
+				layout === 'mobile' ? <NavbarControlButton collapsed /> : <>{}</>
 			}
 		/>
 	);

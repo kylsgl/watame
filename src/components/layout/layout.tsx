@@ -41,7 +41,7 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
 	};
 
 	return (
-		<Fragment>
+		<>
 			<AppShell
 				className={styles.appShell}
 				header={!isDesktop ? <Header /> : undefined}
@@ -68,6 +68,6 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
 
 			<SettingsModal />
 			<ReaderLoader />
-		</Fragment>
+		</>
 	);
 }

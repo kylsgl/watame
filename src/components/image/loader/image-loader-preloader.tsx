@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useAtomValue } from 'jotai';
 import { type UseQueryResult } from '@tanstack/react-query';
 
@@ -70,5 +70,5 @@ export default function ImageLoaderPreloader({
 		}
 	}, [activeIndex, imageUrlCache, imageUrls, preload, queries, statusMemo]);
 
-	return <Fragment></Fragment>;
+	return <>{}</>;
 }

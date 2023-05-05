@@ -22,7 +22,7 @@ export default function SettingsHorizontal({
 	className = '',
 }: SettingsHorizontalProps): JSX.Element {
 	return (
-		<Fragment>
+		<>
 			<SettingsHorizontalDirection className={className} />
 			<SettingsHorizontalPage
 				className={className}
@@ -30,6 +30,6 @@ export default function SettingsHorizontal({
 			/>
 			<SettingsHorizontalAlign className={className} />
 			<SettingsHorizontalOffset className={className} />
-		</Fragment>
+		</>
 	);
 }

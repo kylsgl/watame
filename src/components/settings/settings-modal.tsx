@@ -18,11 +18,11 @@ import SettingsItemDarkMode from './item/settings-item-dark-mode';
 
 const GENERAL_SETTINGS: TabItem = {
 	content: (
-		<Fragment>
+		<>
 			<SettingsItemLayout />
 			<SettingsItemDarkMode />
 			<SettingsItemAnimations />
-		</Fragment>
+		</>
 	),
 	icon: IconTool,
 	title: 'General Settings',
@@ -31,11 +31,11 @@ const GENERAL_SETTINGS: TabItem = {
 
 const READER_SETTINGS: TabItem = {
 	content: (
-		<Fragment>
+		<>
 			<SettingsItemReaderLayout />
 			<SettingsItemScroll />
 			<SettingsItemPreload />
-		</Fragment>
+		</>
 	),
 	icon: IconBook,
 	title: 'Reader Settings',
@@ -67,9 +67,9 @@ export default function SettingsModal({
 		<TabbedModal
 			className={styles['settings-modal']}
 			data={DATA}
-			lockScroll={true}
+			lockScroll
 			opened={opened ?? globalOpenedModal === 'Settings'}
-			withTooltip={true}
+			withTooltip
 		/>
 	);
 }

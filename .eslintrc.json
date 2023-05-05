@@ -6,7 +6,7 @@
 	"extends": [
 		"next/core-web-vitals",
 		"standard-with-typescript",
-		"airbnb-base",
+		"airbnb",
 		"airbnb-typescript",
 		"airbnb/hooks",
 		"plugin:@typescript-eslint/recommended",
@@ -43,6 +43,9 @@
 		"@typescript-eslint/consistent-type-imports": "error",
 		"@typescript-eslint/prefer-for-of": "off",
 		"no-console": ["warn", { "allow": ["warn", "error"] }],
-		"no-void": ["error", { "allowAsStatement": true }]
+		"no-void": ["error", { "allowAsStatement": true }],
+		"react/jsx-props-no-spreading": "off",
+		"react/react-in-jsx-scope": "off",
+		"react/require-default-props": "off"
 	}
 }

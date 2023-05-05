@@ -50,8 +50,8 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   swiper:
-    specifier: 9.2.4
-    version: 9.2.4
+    specifier: 9.2.3
+    version: 9.2.3
   valid-url:
     specifier: ^1.0.9
     version: 1.0.9
@@ -5926,8 +5926,8 @@ packages:
     resolution: {integrity: sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA==}
     dev: true
 
-  /swiper@9.2.4:
-    resolution: {integrity: sha512-L7y3K/iiMXNYQ94FbfcJn7jex4QPnS4+voXGupTdC+UHW4XrR40QDdm4c9hXJ+Br0Il7PP0vP1W3goM9/Ly6Sg==}
+  /swiper@9.2.3:
+    resolution: {integrity: sha512-hxqcjIsYPP1fv+KIXPqGywl6ik8RBp0y0i9+TOIh55ca6SpZ5FrgNJ4QXPhsl6mlSBMEYPmh5zOKtZpI8zpWeQ==}
     engines: {node: '>= 4.7.0'}
     dependencies:
       ssr-window: 4.0.2

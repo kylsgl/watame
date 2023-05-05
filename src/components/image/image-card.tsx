@@ -34,7 +34,7 @@ export default function ImageCard({
 			style={{
 				cursor: onClick != null ? 'pointer' : undefined,
 			}}
-			tabIndex={0}
+			tabIndex={onClick != null ? 0 : undefined}
 		>
 			{title !== undefined ? (
 				<section>

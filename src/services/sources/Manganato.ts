@@ -102,7 +102,13 @@ export default class Manganato extends Source {
 	}
 
 	getItemUrlFromChapterUrl(url: string): string {
-		return url.replace(/\/chapter-.*/, '');
+		const itemPath: string =
+			url
+				.replace(/\/chapter-.*/, '')
+				.split('/')
+				.at(-1) ?? '';
+
+		return `${this.baseUrl}/${itemPath}`;
 	}
 
 	async searchByTitle(searchQuery: string): Promise<SearchResult[]> {

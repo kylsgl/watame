@@ -22,6 +22,8 @@ export default function useSmoothScroll(
 	framerate: number
 ): void {
 	useEffect((): (() => void) | undefined => {
+		let frame = 0;
+
 		if (steps <= 0) {
 			return undefined;
 		}
@@ -38,25 +40,25 @@ export default function useSmoothScroll(
 					switch (direction as keyof KeyBinds) {
 						case 'Up': {
 							action = (): void => {
-								window.scroll(window.scrollX, window.scrollY - steps);
+								window.scroll(window.scrollX, window.scrollY - frame);
 							};
 							break;
 						}
 						case 'Down': {
 							action = (): void => {
-								window.scroll(window.scrollX, window.scrollY + steps);
+								window.scroll(window.scrollX, window.scrollY + frame);
 							};
 							break;
 						}
 						case 'Left': {
 							action = (): void => {
-								window.scroll(window.scrollX - steps, window.scrollY);
+								window.scroll(window.scrollX - frame, window.scrollY);
 							};
 							break;
 						}
 						case 'Right': {
 							action = (): void => {
-								window.scroll(window.scrollX + steps, window.scrollY);
+								window.scroll(window.scrollX + frame, window.scrollY);
 							};
 							break;
 						}
@@ -99,6 +101,12 @@ export default function useSmoothScroll(
 				const delta: number = timestamp - next;
 
 				if (delta >= interval) {
+					if (frame < steps) {
+						frame += steps * 0.075;
+					} else if (frame > steps) {
+						frame = steps;
+					}
+
 					keys[key].action();
 
 					next = timestamp - (delta % interval);
@@ -130,6 +138,8 @@ export default function useSmoothScroll(
 			if (!(code in keys)) {
 				return;
 			}
+
+			frame = 0;
 
 			const { animation } = keys[code];
 			if (animation == null) {

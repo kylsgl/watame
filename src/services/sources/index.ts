@@ -6,11 +6,16 @@ import Manhwa18 from './Manhwa18';
 import Toonily from './Toonily';
 import Webtoons from './Webtoons';
 import { type SourcesEntry, type Sources } from './interfaces';
+import Hiperdex from './Hiperdex';
 
 export * from './interfaces';
 
 export const sourcesInstances: Sources = new Proxy(
 	{
+		'hiperdex.com': {
+			enabled: false,
+			source: new Hiperdex(),
+		},
 		'mangakatana.com': {
 			enabled: true,
 			source: new MangaKatana(),
